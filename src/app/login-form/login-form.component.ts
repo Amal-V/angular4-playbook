@@ -14,11 +14,6 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit() {}
 	loginUser(username,password) {
-		console.log("DFGDFG");
-	  	 // var username = e.target.elements[0].value;
-	  	 // var password = e.target.elements[1].value;
-	  	 console.log(username,password);
-	  	// var type = {"Content-Type":"application/json"};
 	  	var body = { "user": username, "pass": password, "remember-me": "false" };
 	  	this.http.post('http://localhost:3000/', body)
   // See below - subscribe() is still necessary when using post().
@@ -34,6 +29,9 @@ export class LoginFormComponent implements OnInit {
 }
 register(){
 	this.router.navigate(['register'])
+}
+signinWithSocial(){
+	this.router.navigate(['sign-in'])
 }
 signinGoogle(gapi){
 console.log(gapi);
