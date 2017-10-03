@@ -1,0 +1,20 @@
+<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="581750395099-21bl2gt880tfshppl45dm6hjcf4mnqvr.apps.googleusercontent.com	">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<form (submit) = "loginUser($event)">
+	<div class = "input">
+	  <label>Username</label>
+	  <input type="text" (input)="username = $event.target.value" >
+	</div>
+	<div class = "input">
+	  <label>Password</label>
+	  <input type="password" (input)="password = $event.target.value">
+	</div>
+	<div class = "input">
+	  <input (click)="loginUser(username,password)" type="button" value="Login">
+	  <input (click)="register()" type="button" value="Register">
+	</div>
+	<div class = "input">
+	  <input (click)="signinGoogle(gapi)" type="button" value="Signin with google">
+	</div>
+</form>
