@@ -1,6 +1,4 @@
-<meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="581750395099-21bl2gt880tfshppl45dm6hjcf4mnqvr.apps.googleusercontent.com	">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 <form (submit) = "loginUser($event)">
 	<div class = "input">
 	  <label>Username</label>
@@ -13,8 +11,9 @@
 	<div class = "input">
 	  <input (click)="loginUser(username,password)" type="button" value="Login">
 	  <input (click)="register()" type="button" value="Register">
+	  <input (click)="signinWithSocial()" type="button" value="Sign-in With Google/FB">
 	</div>
-	<div class = "input">
-	  <input (click)="signinGoogle(gapi)" type="button" value="Signin with google">
-	</div>
+	
 </form>
+
+
